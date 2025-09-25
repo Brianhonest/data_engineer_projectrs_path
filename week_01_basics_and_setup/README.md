@@ -12,20 +12,20 @@ This week covers the fundamental setup and basic tools for the data engineering 
   - `main.tf` - Main Terraform configuration
   - `.terraform.lock.hcl` - Terraform lock file
 
-### Docker (Containerization)
-- **Location**: `./docker/`
-- **Description**: Docker configurations and containers for data processing
-- **Files**:
-  - `docker-compose.yaml` - Docker Compose configuration for multi-container setup
-  - `Dockerfile` - Docker image definition
-
-### PostgreSQL (Database)
-- **Location**: `./postgres/`
-- **Description**: PostgreSQL setup, data ingestion, and analysis
-- **Files**:
-  - `ingest_data.py` - Python script for ingesting NY taxi data
-  - `pipeline.py` - Data pipeline script
-  - `upload_data.ipynb` - Jupyter notebook for data upload and analysis
+### Docker + PostgreSQL Pipeline (Integrated System)
+- **Locations**: `./docker/` and `./postgres/`
+- **Description**: Complete containerized data processing pipeline with PostgreSQL database
+- **Docker Components** (`./docker/`):
+  - `docker-compose.yaml` - Multi-container setup (PostgreSQL + pgAdmin)
+  - `Dockerfile` - Python ETL container definition
+- **PostgreSQL & ETL Components** (`./postgres/`):
+  - `ingest_data.py` - Python script for ingesting NY taxi data into PostgreSQL
+  - `pipeline.py` - Data pipeline utilities
+  - `upload_data.ipynb` - Jupyter notebook for data analysis
+- **How they work together**: 
+  - Docker Compose spins up PostgreSQL database and pgAdmin interface
+  - Python ETL scripts connect to the containerized database to process NYC taxi data
+  - Complete end-to-end data pipeline from raw data to queryable database
 
 ### Homework
 - **Location**: `./homework/`

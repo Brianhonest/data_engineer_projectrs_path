@@ -1,6 +1,6 @@
-# NY Taxi Data Pipeline
+# NY Taxi Data Pipeline - Data Engineering Course
 
-A containerized data engineering pipeline for processing NYC Taxi trip data using Docker, PostgreSQL, and Python. This project demonstrates ETL processes, database management, and data analysis workflows.
+A comprehensive data engineering course repository organized by weekly modules. This project demonstrates modern data engineering practices including infrastructure as code, containerized data processing, database management, and ETL workflows using real NYC Taxi trip data.
 
 ## 🏗️ Architecture
 
@@ -31,13 +31,25 @@ A containerized data engineering pipeline for processing NYC Taxi trip data usin
 - Python 3.9+ (if running locally)
 - At least 2GB of available disk space for data processing
 
-## 🛠️ Installation & Setup
+## 🚀 Quick Start
 
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/Brianhonest/ny_taxi_pipeline.git
    cd ny_taxi_pipeline
    ```
+
+2. **Navigate to Week 1 to get started:**
+   ```bash
+   cd week_01_basics_and_setup
+   ```
+
+3. **Check out the course structure:**
+   ```bash
+   cat COURSE_STRUCTURE.md
+   ```
+
+## 🛠️ Week 1: Running the Docker + PostgreSQL Setup
 
 2. **Start the Docker services:**
    ```bash
@@ -145,16 +157,30 @@ The pipeline creates a table with the following structure:
 - `psycopg2-binary`: PostgreSQL adapter
 - `pyarrow`: Parquet file support
 
-## 📁 Project Structure
+## 📁 Course Structure
+
+This repository is organized by weekly modules for systematic learning:
 
 ```
-├── docker-compose.yaml      # Docker services configuration
-├── Dockerfile              # Python ingestion container
-├── ingest_data.py          # Main ETL script
-├── pipeline.py             # Pipeline utilities
-├── upload_data.ipynb       # Jupyter notebook for analysis
-├── .gitignore             # Git ignore rules
-└── README.md              # This file
+├── COURSE_STRUCTURE.md                    # Course overview and progress tracking
+├── week_01_basics_and_setup/              # Week 1: Development Environment & Tools
+│   ├── README.md                          # Week 1 activities and objectives
+│   ├── terraform/                         # Infrastructure as Code
+│   │   ├── main.tf
+│   │   └── .terraform.lock.hcl
+│   ├── docker/                            # Containerization
+│   │   ├── docker-compose.yaml
+│   │   └── Dockerfile
+│   ├── postgres/                          # Database & ETL
+│   │   ├── ingest_data.py
+│   │   ├── pipeline.py
+│   │   └── upload_data.ipynb
+│   └── homework/                          # Week 1 assignments
+├── week_02_workflow_orchestration/         # Week 2: Airflow & Pipeline Orchestration
+├── week_03_data_warehouse/                 # Week 3: BigQuery & Data Warehousing
+├── week_04_analytics_engineering/          # Week 4: dbt & Analytics Engineering
+├── week_05_batch_processing/               # Week 5: Spark & Batch Processing
+└── week_06_streaming/                      # Week 6: Kafka & Stream Processing
 ```
 
 ## 🐛 Troubleshooting
