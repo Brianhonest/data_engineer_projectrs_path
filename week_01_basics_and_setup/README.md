@@ -15,10 +15,17 @@ This week covers the fundamental setup and basic tools for the data engineering 
 ### Docker (Containerization)
 - **Location**: `./docker/`
 - **Description**: Docker configurations and containers for data processing
+- **Files**:
+  - `docker-compose.yaml` - Docker Compose configuration for multi-container setup
+  - `Dockerfile` - Docker image definition
 
 ### PostgreSQL (Database)
 - **Location**: `./postgres/`
-- **Description**: PostgreSQL setup and configurations
+- **Description**: PostgreSQL setup, data ingestion, and analysis
+- **Files**:
+  - `ingest_data.py` - Python script for ingesting NY taxi data
+  - `pipeline.py` - Data pipeline script
+  - `upload_data.ipynb` - Jupyter notebook for data upload and analysis
 
 ### Homework
 - **Location**: `./homework/`
