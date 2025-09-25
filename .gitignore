@@ -33,7 +33,6 @@ venv.bak/
 # Data files
 *.csv
 *.parquet
-*.json
 ny_taxi_postgres_data/
 output.*
 
@@ -57,3 +56,22 @@ docker-compose.override.yml
 
 # Environment variables
 .env
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfvars.json
+.terraform.tfstate.lock.info
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraformrc
+terraform.rc
+
+# Sensitive files
+*.json
