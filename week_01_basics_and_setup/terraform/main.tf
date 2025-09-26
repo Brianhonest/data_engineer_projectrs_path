@@ -1,7 +1,7 @@
 terraform {
   required_providers {
     google = {
-      source = "hashicorp/google"
+      source  = "hashicorp/google"
       version = "7.4.0"
     }
   }
@@ -9,15 +9,16 @@ terraform {
 
 provider "google" {
   # Configuration options
-  project = "lunar-box-472914-f7"
-  region  = "us-central1"
+  credentials = var.credentials
+  project = var.project_id
+  region  = var.region
 }
 
 resource "google_storage_bucket" "auto-expire" {
-  name          = "lunar-box-472914-f7-terraform-demo"
-  location      = "US"
+  name          = var.gcs_bucket_name
+  location      = var.location
   force_destroy = true
-
+  storage_class = var.gcs_storage_class
 
   lifecycle_rule {
     condition {
@@ -27,4 +28,10 @@ resource "google_storage_bucket" "auto-expire" {
       type = "AbortIncompleteMultipartUpload"
     }
   }
+}
+
+
+resource "google_bigquery_dataset" "demo_dataset" {
+  dataset_id = var.bq_dataset_namer
+  location   = var.location
 }
