@@ -1,0 +1,12 @@
+Installing dbt project and profile setup
+Info Created .vscode/extensions.json with dbt extension recommendation
+Success Project created successfully!
+Info Project name: jaffle_shop
+Info Project directory: jaffle_shop
+Info Setting up your profile...
+Info Creating new profile...
+No dbt_cloud.yml found - proceeding without cloud pre-population
+error: dbt1001: Failed to get input for project: IO error: read interrupted
+
+==================== Execution Summary =====================
+Finished 'init' with 1 error [10m 38s]
